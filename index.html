@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Timetable</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f8d5ec, #dff6ff);
+      color: #333;
+      padding: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #6a0572;
+    }
+
+    .carousel-container {
+      overflow-x: auto;
+      white-space: nowrap;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .day {
+      display: inline-block;
+      vertical-align: top;
+      background-color: #ffffffcc;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: auto;
+      margin-right: 15px;
+      scroll-snap-align: start;
+    }
+
+    .Myinformation {
+      display: inline-block;
+      vertical-align: top;
+      background-color: #ffffffcc;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: auto;
+      margin-right: 15px;
+      scroll-snap-align: start;
+    }
+
+    .day h2 {
+      color: #4a148c;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .slot {
+      background-color: #e0f7fa;
+      margin: 8px 0;
+      padding: 10px;
+      border-left: 5px solid #00acc1;
+      border-radius: 5px;
+    }
+
+    .slot.study {
+      background-color: #f3e5f5;
+      border-left-color: #ba68c8;
+    }
+
+    .slot.lunch {
+      background-color: #fff9c4;
+      border-left-color: #fdd835;
+    }
+
+    .slot.breaky {
+      background-color: #fff9c4;
+      border-left-color: #fdd835;
+    }
+
+    .slot.dinner{
+      background-color: #fff9c4;
+      border-left-color: #fdd835;
+    }
+
+    .slot.movie {
+      background-color: #98d8a0;
+      border-left-color: #17d139;
+    }
+
+    @media (min-width: px) {
+      .carousel-container {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+      }
+      .day {
+        flex: 0 0 auto;
+        width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Weekly Academic Timetable</h1>
+  <div class="carousel-container">
+    <div class="day">
+      <h2>Monday</h2>
+      <div class="slot"> 5:00 — Good Morning!</div>
+      <div class="slot">5:00 - 6:00 — Exercise</div>
+      <div class="slot">6:00 - 6:20 — Brush + Drink warm lemon water + Bathroom</div>
+      <div class="slot">6:20 - 6:50 — Hair wash and get ready</div>
+      <div class="slot">6:50 - 7:00 — Do Hair</div>
+      <div class="slot">7:00 - 7:10 — Check phone and Go to Library</div>
+      <div class="slot study">7:10 - 8:10 — Study in Library-->1h</div>
+      <div class="slot breaky">8:10 - 8:40 — Breaky</div>
+      <div class="slot">8:40 - 8:50 — check phone and Go to Class</div>
+      <div class="slot">8:50 - 10:50 — IF(L) 5155</div>
+      <div class="slot">10:50 - 11:00 — Break</div>
+      <div class="slot">11:00 - 1:00 — SE(L) 5155</div>
+      <div class="slot study">1:00 - 2:00 — Study in Library-->1h</div>
+      <div class="slot lunch">2:00 - 2:20 — Lunch</div>
+      <div class="slot">2:20 - 2:40 — Check phone and Go to Library</div>
+      <div class="slot study">2:40 - 3:20 — Study in Library-->40min</div>
+      <div class="slot">3:20 - 3:30 — Check phone and Go to Class</div>
+      <div class="slot">3:30 - 4:30 — PS(T) 5155</div>
+      <div class="slot">4:30 - 4:40 — Check phone and Go to Library</div>
+      <div class="slot study">4:40 - 8:00 — Study in Library-->3h,20min</div>
+      <div class="slot">8:00 - 8:10 — Back to mess</div>
+      <div class="slot dinner">8:10 - 8:40 Dinner</div>
+      <div class="slot">8:50 - 9:00 — Parents Call and Go to Library</div>
+      <div class="slot study">9:00 - 11:50 — Study in Library-->2h,30min</div>
+      <div class="slot">11:50 - 12:00 —  Check phone and Come back to Room </div>
+      <div class="slot">12:00 - 12:20 — Oil the hair and bath and sleep</div>
+    </div>
+
+    <div class="day">
+      <h2>Tuesday</h2>
+      <div class="slot"> 5:00 — Good Morning!</div>
+      <div class="slot">5:00 - 6:00 — Exercise</div>
+      <div class="slot">6:00 - 6:20 — Brush + Drink warm lemon water + Bathroom</div>
+      <div class="slot">6:20 - 6:35 — Do Hair</div>
+      <div class="slot">6:45 - 7:00 — Bath and get ready</div>
+      <div class="slot">7:00 - 7:10 — Check phone and Go to Library</div>
+      <div class="slot study">7:10 - 9:10 — Study in Library-->2h</div>
+      <div class="slot breaky">9:10 - 9:40 — Breaky</div>
+      <div class="slot">9:40 - 9:50 — Check phone and Go to Class</div>
+      <div class="slot">9:50 - 10:50 — PS(L) 5155</div>
+      <div class="slot">10:50 - 11:00 — Break</div>
+      <div class="slot">11:00 - 1:00 — OOM(L) 5155</div>
+      <div class="slot study">1:00 - 2:00 — Study in Library-->1h</div>
+      <div class="slot lunch">2:00 - 2:20 — Lunch</div>
+      <div class="slot">2:20 - 2:40 — Check phone and Go to Library</div>
+      <div class="slot study">2:40 - 4:20 — Study in Library-->1h,40min</div>
+      <div class="slot">4:20 - 4:30 — Check phone and Go to Library</div>
+      <div class="slot">4:30 - 6:30 — EK BHARATH SHEERSH BHARATH 5155</div>
+      <div class="slot">6:30 - 6:40 — Check phone and Go to Library</div>
+      <div class="slot study">6:40 - 8:00 — Study in Library-->1h,20min</div>
+      <div class="slot">8:00 - 8:10 — Back to mess</div>
+      <div class="slot dinner">8:10 - 8:40 Dinner</div>
+      <div class="slot">8:50 - 9:00 — Parents Call and Go to Library</div>
+      <div class="slot study">9:00 - 11:50 — Study in Library-->2h,30min</div>
+      <div class="slot">11:50 - 12:00 —  Check phone and Come back to Room </div>
+      <div class="slot">12:00 - 12:20 — Oil the hair and bath and sleep</div>
+    </div>
+
+    <div class="day">
+      <h2>Wednesday</h2>
+      <div class="slot"> 5:00 — Good Morning!</div>
+      <div class="slot">5:00 - 6:00 — Exercise</div>
+      <div class="slot">6:00 - 6:20 — Brush + Drink warm lemon water + Bathroom</div>
+      <div class="slot">6:20 - 6:35 — Do Hair</div>
+      <div class="slot">6:45 - 7:00 — Bath and get ready</div>
+      <div class="slot">7:00 - 7:10 — Check phone and Go to Library</div>
+      <div class="slot study">7:10 - 8:10 — Study in Library-->1h</div>
+      <div class="slot breaky">8:10 - 8:40 — Breaky</div>
+      <div class="slot">8:40 - 8:50 — Check phone and Go to Library</div>
+      <div class="slot study">8:50 - 10:50 — Study in Library-->2h</div>
+      <div class="slot">10:50 - 11:00 — Check phone and Go to Class</div>
+      <div class="slot">11:00 - 1:00 — OS(L) 5155</div>
+      <div class="slot study">1:00 - 2:00 — Study in Library-->1h</div>
+      <div class="slot lunch">2:00 - 2:20 — Lunch</div>
+      <div class="slot">2:20 - 2:40 — Check phone and Go to Library</div>
+      <div class="slot">2:20 - 4:30 — OS(P) 5042</div>
+      <div class="slot">4:30 - 4:40 — Check phone and Go to Library</div>
+      <div class="slot study">4:40 - 8:00 — Study in Library-->3h,20min</div>
+      <div class="slot">8:00 - 8:10 — Back to mess</div>
+      <div class="slot dinner">8:10 - 8:40 Dinner</div>
+      <div class="slot">8:50 - 9:00 — Parents Call and Go to Library</div>
+      <div class="slot study">9:00 - 11:50 — Study in Library-->2h,30min</div>
+      <div class="slot">11:50 - 12:00 —  Check phone and Come back to Room </div>
+      <div class="slot">12:00 - 12:20 — Oil the hair and bath and sleep</div>
+    </div>
+
+    <div class="day">
+      <h2>Thursday</h2>
+      <div class="slot"> 5:00 — Good Morning!</div>
+      <div class="slot">5:00 - 6:00 — Exercise</div>
+      <div class="slot">6:00 - 6:20 — Brush + Drink warm lemon water + Bathroom</div>
+      <div class="slot">6:20 - 6:50 — Hair wash and get ready</div>
+      <div class="slot">6:50 - 7:00 — Do Hair</div>
+      <div class="slot">7:00 - 7:10 — Check phone and Go to Library</div>
+      <div class="slot study">7:10 - 9:10 — Study in Library-->2h</div>
+      <div class="slot breaky">9:10 -9:40 — Breaky</div>
+      <div class="slot">9:40 - 9:50 — Check phone and Go to Class</div>
+      <div class="slot">9:50 - 10:50 — PS(L) 5155</div>
+      <div class="slot">10:50 - 11:00 — Break</div>
+      <div class="slot">11:00 - 1:00 — TOC(L) 5155</div>
+      <div class="slot study">1:00 - 2:00 — Study in Library-->1h</div>
+      <div class="slot lunch">2:00 - 2:20 — Lunch</div>
+      <div class="slot">2:20 - 2:30 — Check phone and Go to Class</div>
+      <div class="slot">2:30 - 4:30 — OOM(P) 5042</div>
+      <div class="slot">4:30 - 6:30 — SE(P) 5119</div>
+      <div class="slot">6:30 - 6:40 — Check phone and Go to Library</div>
+      <div class="slot study">6:40 - 8:00 — Study in Library-->1h,20min</div>
+      <div class="slot">8:00 - 8:10 — Back to mess</div>
+      <div class="slot dinner">8:10 - 8:40 Dinner</div>
+      <div class="slot">8:50 - 9:00 — Parents Call and Go to Library</div>
+      <div class="slot study">9:00 - 11:50 — Study in Library-->2h,30min</div>
+      <div class="slot">11:50 - 12:00 —  Check phone and Come back to Room </div>
+      <div class="slot">12:00 - 12:20 — Oil the hair and bath and sleep</div>
+    </div>
+
+    <div class="day">
+      <h2>Friday</h2>
+      <div class="slot"> 5:00 — Good Morning!</div>
+      <div class="slot">5:00 - 6:00 — Exercise</div>
+      <div class="slot">6:00 - 6:20 — Brush + Drink warm lemon water + Bathroom</div>
+      <div class="slot">6:20 - 6:35 — Do Hair</div>
+      <div class="slot">6:45 - 7:00 — Bath and get ready</div>
+      <div class="slot">7:00 - 7:10 — Check phone and Go to Library</div>
+      <div class="slot study">7:10 - 9:10 — Study in Library-->2h</div>
+      <div class="slot breaky">9:10 -9:40 — Breaky</div>
+      <div class="slot">9:40 - 9:50 — Check phone and Go to Class</div>
+      <div class="slot">9:50 - 10:50 — TOC(T) 5155</div>
+      <div class="slot">10:50 - 11:00 — Break</div>
+      <div class="slot">11:00 - 12:00 — OS(L) 5155</div>
+      <div class="slot">12:00 - 2:00 — Study in Library-->2h</div>
+      <div class="slot lunch">2:00 - 2:20 — Lunch</div>
+      <div class="slot">2:20 - 2:30 — Check phone and Go to Class</div>
+      <div class="slot">2:30 - 3:30 — OOM(L) 5155</div>
+      <div class="slot">3:30 - 5:30 — INDIAN ECONOMICS 5107</div>
+      <div class="slot">5:30 - 5:40 — Check phone and Go to Library</div>
+      <div class="slot study">5:40 - 8:00 — Study in Library-->2h,20min</div>
+      <div class="slot">8:00 - 8:10 — Back to mess</div>
+      <div class="slot dinner">8:10 - 8:40 Dinner</div>
+      <div class="slot">8:50 - 9:00 — Parents Call and Go to Library</div>
+      <div class="slot study">9:00 - 11:50 — Study in Library-->2h,30min</div>
+      <div class="slot">11:50 - 12:00 —  Check phone and Come back to Room </div>
+      <div class="slot">12:00 - 12:20 — Oil the hair and bath and sleep</div>
+    </div>
+
+    <div class="day">
+      <h2>Saturday</h2>
+      <div class="slot"> 5:00 — Good Morning!</div>
+      <div class="slot">5:00 - 6:00 — Exercise</div>
+      <div class="slot">6:00 - 6:20 — Brush + Drink warm lemon water + Bathroom</div>
+      <div class="slot">6:20 - 6:35 — Do Hair</div>
+      <div class="slot">6:45 - 7:00 — Bath and get ready</div>
+      <div class="slot">7:00 - 7:10 — Check phone and Go to Library</div>
+      <div class="slot study">7:10 - 10:10 — Study in Library-->3h</div>
+      <div class="slot breaky">10:10 - 10:40 — Breaky</div>
+      <div class="slot">10:40 - 10:50 — Check phone and Go to Library</div>
+      <div class="slot study">10:50 - 2:00 — Study in Library-->3h,10min</div>
+      <div class="slot lunch">2:00 - 2:20 — Lunch</div>
+      <div class="slot">2:20 - 2:30 — Check phone and Go to Library</div>
+      <div class="slot study">2:40 - 8:00 — Study in Library-->5h,20min</div>
+      <div class="slot">8:00 - 8:10 — Back to mess</div>
+      <div class="slot dinner">8:10 - 8:40 Dinner</div>
+      <div class="slot">8:50 - 9:00 — Parents Call and Go to Library</div>
+      <div class="slot study">9:00 - 11:50 — Study in Library-->2h,50min</div>
+      <div class="slot">11:50 - 12:00 —  Check phone and Come back to Room </div>
+      <div class="slot">12:00 - 12:20 — Oil the hair and bath and sleep</div>
+    </div>
+    <div class="day">
+      <h2>Sunday</h2>
+      <div class="slot"> 5:00 — Good Morning!</div>
+      <div class="slot">5:00 - 6:00 — Exercise</div>
+      <div class="slot">6:00 - 6:20 — Brush + Drink warm lemon water + Bathroom</div>
+      <div class="slot">6:20 - 6:35 — Do Hair</div>
+      <div class="slot">6:45 - 7:00 — Bath and get ready</div>
+      <div class="slot">7:00 - 7:10 — Check phone and Go to Library</div>
+      <div class="slot study">7:10 - 10:10 — Study in Library-->3h</div>
+      <div class="slot breaky">10:10 - 10:40 — Breaky</div>
+      <div class="slot">10:40 - 10:50 — Check phone and Go to Library</div>
+      <div class="slot study">10:50 - 2:00 — Study in Library-->3h,10min</div>
+      <div class="slot lunch">2:00 - 2:20 — Lunch</div>
+      <div class="slot">2:20 - 2:30 — Search for a Movies/Dramas</div>
+      <div class="slot movie">2:40 - 8:00 — Watch movies/Dramas</div>
+      <div class="slot">8:00 - 8:10 — Back to mess</div>
+      <div class="slot dinner">8:10 - 8:40 Dinner</div>
+      <div class="slot">8:50 - 9:00 — Parents Call and Go to Library</div>
+      <div class="slot study">9:00 - 11:50 — Study in Library-->2h,50min</div>
+      <div class="slot">11:50 - 12:00 —  Check phone and Come back to Room </div>
+      <div class="slot">12:00 - 12:20 — Oil the hair and bath and sleep</div>
+     </div>
+  </div>
+  <div class="carousel-container">
+    <div class="Myinformation">
+      <h2>User name</h2>
+    <div class="slot">Shiavni17112006  </div>
+    <div class="slot">iit2024275@iita.ac.in </div>
+    <div class="slot">Shivani.99.03.iiita@gmail.com  </div>
+    <div class="slot">— </div>
+    <div class="slot">Shivani_777_99</div>
+     <div class="slot">Shivani_Yadav</div>
+     <div class="slot">BAYYA SHIVANI</div>
+     <div class="slot"></div>
+    </div>
+    <div class="Myinformation">
+      <h2>Account</h2>
+    <div class="slot"> Github account</div>
+    <div class="slot"> GMail account </div>
+    <div class="slot"> GMail account </div>
+    <div class="slot"> MySQL </div>
+    <div class="slot"> Insta</div>
+     <div class="slot">Monkeytype</div>
+     <div class="slot">W3Schools</div>
+     <div class="slot"></div>
+    </div>
+    <div class="Myinformation">
+      <h2>Password</h2>
+    <div class="slot"> Saidulu@67 </div>
+    <div class="slot"> nagamma@7</div>
+    <div class="slot"> try777toget</div>
+    <div class="slot"> Saidulu@7</div>
+    <div class="slot"> - </div>
+    <div class="slot">Shivani@777</div>
+    <div class="slot"> - </div>
+    <div class="slot"></div>
+    </div>
+    <div class="Myinformation">
+      <h2>Related</h2>
+    <div class="slot"> iit2024275@iiita.ac.in</div>
+    <div class="slot"> 9392762365</div>
+    <div class="slot"> My laptop</div>
+    <div class="slot"> MySQL93 referance Mannual</div>
+    <div class="slot"> - </div>
+    <div class="slot"> Shivani.99.03.iiita@gmail.com</div>
+    <div class="slot"> iit2024275@iiita.ac.in</div>
+    <div class="slot"></div>
+    </div>
+  </div>
+  <div>
+    <pre>
+      🌞 Skin Care
+1. Tan Removal
+Best Combo: Turmeric powder + Milk + Curd
+Recipe:
+
+1 tsp turmeric powder
+
+2 tsp curd
+
+1 tsp milk
+How to use:
+
+Mix into a paste, apply to tanned areas, leave for 15 min, wash with lukewarm water.
+
+Use 2–3 times a week.
+
+2. Face Glower
+Best Combo: Coffee powder + Milk + Banana
+Recipe:
+
+1 tsp coffee powder
+
+1–2 tsp milk
+
+2–3 mashed banana slices
+How to use:
+
+Mix well, apply to face, leave for 15–20 min, wash with cool water.
+
+Use once or twice a week for fresh glow.
+
+3. Moisturiser
+Best Combo: Aloe vera gel + Almond oil
+Recipe:
+
+2 tsp aloe vera gel
+
+3–4 drops almond oil
+How to use:
+
+Blend and store in a small container, use daily as a natural moisturiser.
+
+4. Eye Makeup/Shadow Remover
+Best Combo: Almond oil + Milk
+Recipe:
+
+Mix 1 tsp almond oil with 1 tsp milk.
+
+Dip cotton, gently wipe eyes, then wash with plain water.
+
+💇 Hair Care
+1. Hair Smoother
+Best Combo: Aloe vera gel + Almond oil
+Recipe:
+
+2 tbsp aloe vera gel
+
+1 tbsp almond oil
+
+Apply to hair length for 30 min before washing.
+
+2. Hair Glowing Oil
+Best Combo: Almond oil + Boiled rice water
+Recipe:
+
+Warm 2 tbsp almond oil slightly.
+
+Mix with 3 tbsp cooled boiled rice water.
+
+Massage scalp for 5–10 min, leave 1 hour, wash.
+
+3. Hair Conditioner
+Best Combo: Curd + Aloe vera gel + Banana
+Recipe:
+
+3 tbsp curd
+
+2 tbsp aloe vera gel
+
+2–3 mashed banana slices
+
+Apply to hair after shampooing, leave 15 min, rinse.
+
+4. Hair Growing Oil
+Best Combo: Almond oil + Beetroot juice + Carrot juice
+Recipe:
+
+Warm 3 tbsp almond oil.
+
+Add 1 tbsp beetroot juice + 1 tbsp carrot juice.
+
+Massage scalp for 10 min, leave overnight or at least 1 hour before washing.
+
+🍀 For Overall Hair & Skin Health
+Rice water – Use as hair rinse once a week, makes hair strong.
+
+Cucumber – Eat raw or apply juice to face for hydration.
+
+Beetroot & carrot juice – Drinking improves skin glow & hair roots.
+    </pre>
+  </div>
+</body>
+</html>
